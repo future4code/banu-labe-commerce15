@@ -18,10 +18,28 @@ class Home extends React.Component {
     render() {
       return (
         <div>
+           
             <HeaderHome>
             <ImgLogo src='/img/space-art-logo.png' />
-            <input name='filtro' placeholder="O que você prcura?" /> 
+            <input 
+            placeholder="Busca por nome"
+            value = {this.props.query}
+            onChange = {this.props.updateQuery}
+            
+             /> 
+       
             </HeaderHome>
+            <div>
+              <input
+              type= "number" 
+              placeholder="Preço Minimo"   
+              />
+            <input
+              type= "number" 
+              name="minPrice"
+              placeholder="Preço Máximo"
+              />
+            </div>
         </div>
       )
     };

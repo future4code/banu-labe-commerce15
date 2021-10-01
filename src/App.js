@@ -53,38 +53,62 @@ class App extends React.Component {
       },
       {
         id: Date.now(),
-        name: "Caneca2",
-        value: 50.0,
+        name: "Caneca 2",
+        value: 44.0,
         imagemURL: <ProdutoImg src="/img/caneca2.png"/>,
       },
       {
         id: Date.now(),
         name: "Caneca3",
-        value: 50.0,
+        value: 80.0,
         imagemURL: <ProdutoImg src="/img/caneca3.png"/>,
       },
       {
         id: Date.now(),
         name: "Caneca4",
-        value: 50.0,
+        value: 300.0,
         imagemURL: <ProdutoImg src="/img/caneca4.png"/>,
       },
       {
         id: Date.now(),
         name: "Caneca5",
-        value: 50.0,
+        value: 20.0,
         imagemURL: <ProdutoImg src="/img/caneca5.jpg"/>,
       },
       {
         id: Date.now(),
         name: "Caneca6",
-        value: 50.0,
+        value: 150.0,
         imagemURL: <ProdutoImg src="/img/caneca10.png"/>,
       },
     ],
     filtro: "",
-    valueInput: ""
+    query: "",
+    minPrice: "",
+    maxPrice:""
   }
+
+  updateQuery = (ev) =>{
+    this.setState({
+      query:ev.target.value
+    
+    })
+    console.log("estou na home")
+  }
+
+  updateMinPrice = (ev) => {
+    this.setState({
+       minPrice: ev.target.value
+    })
+ }
+
+ updateMaxPrice = (ev) => {
+    this.setState({
+       maxPrice: ev.target.value
+    })
+ }
+
+
   render() {
     const novoArrayDeProdutos = this.state.produtos.map((produto)=>{
       return (
@@ -95,18 +119,40 @@ class App extends React.Component {
           <button>
             Adicionar ao carrinho
           </button>
-        </CardProduto>
+         </CardProduto>
       )
     });
-
+      
     return (
      <div>
-       <Home />
+     <Home>
+     {this.state.produtos
+     .filter(prod =>{
+      return prod.name.toLowerCase().includes(this.state.query.toLowerCase())
+    }).filter(prod => {
+      return this.state.minPrice === "" || prod.value >= this.state.minPrice
+   })
+   .filter(prod => {
+      return this.state.maxPrice === "" || prod.value <= this.state.maxPrice
+   })
+    .map(produto =>{
+      return <CardProduto>
+        {produto}
+      </CardProduto>
+    } )
+  }
+     query={this.state.query}
+     updateQuery={this.updateQuery}
+    
+   
+     </Home>
        <MainPrincipal>
         {novoArrayDeProdutos}
+       
        </MainPrincipal>
        <FooterPrincipal>
        </FooterPrincipal>
+      
      </div>
     )
   }
