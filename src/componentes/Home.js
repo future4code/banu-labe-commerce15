@@ -14,11 +14,14 @@ const HeaderHome = styled.div`
   height: 12vh;
   background-color: #4daecd;
 `
+
 class Home extends React.Component {
     render() {
       return (
         <div>
-           
+        
+
+        
             <HeaderHome>
             <ImgLogo src='/img/space-art-logo.png' />
             <input 
