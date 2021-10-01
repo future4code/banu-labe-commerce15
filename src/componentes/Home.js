@@ -32,14 +32,28 @@ class Home extends React.Component {
             <div>
               <input
               type= "number" 
-              placeholder="Preço Minimo"   
+              placeholder="Preço Minimo"  
+              value = {this.props.minPrice} 
+              onChange = {this.props.updateMinPrice}
               />
             <input
               type= "number" 
-              name="minPrice"
               placeholder="Preço Máximo"
+              value= {this.props.MaxPrice}
+              onChange = {this.props.updateMaxPrice}
               />
+             <label for="sort">Ordenação</label>
+            <select
+            name="sort"
+            value={}
+            onChange={}
+            >
+            <option value="crescente">Crescente</option>
+            <option value="decrescente">Decrescente</option>
+            </select>
+
             </div>
+
         </div>
       )
     };
