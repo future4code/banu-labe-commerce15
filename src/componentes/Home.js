@@ -1,9 +1,13 @@
 import React from 'react'; 
+import Carrinho from './Carrinho'
 import styled from 'styled-components';
 
 const ImgLogo = styled.img`
  height: 12vh;
  /* margin-top: 10px */
+`
+const ImgCarrinho = styled.img`
+ height:5vh;
 `
 
 const HeaderHome = styled.div`
@@ -15,7 +19,26 @@ const HeaderHome = styled.div`
   background-color: #4daecd;
 `
 class Home extends React.Component {
+
+  // state = {
+  //   pagina: "home" 
+  // }
+
+  
+  // mudaPaginaCarrinho = () => {
+  //  this.setState ({ pagina: "carrinho" })
+  // }
+
+
     render() {
+
+      // let page;
+      // if (this.state.pagina === "home") {
+      //   page = <Home />;
+      // } else if (this.state.pagina === "carrinho") {
+      //   page = <Carrinho />;
+      // }
+
       return (
         <div>
            
@@ -27,6 +50,8 @@ class Home extends React.Component {
             onChange = {this.props.updateQuery}
             
              /> 
+             {/* <div>{page}</div> */}
+             <button> <ImgCarrinho src='/img/carrinho.png' /> </button>
        
             </HeaderHome>
             <div>
@@ -42,14 +67,14 @@ class Home extends React.Component {
               value= {this.props.MaxPrice}
               onChange = {this.props.updateMaxPrice}
               />
-             <label for="sort">Ordenação</label>
+            <label for="sort">Ordenação</label>
             <select
-            name="sort"
-            value={}
-            onChange={}
+            name="order"
+            value={this.props.order}
+            onChange={this.props.updateOrder}
             >
-            <option value="crescente">Crescente</option>
-            <option value="decrescente">Decrescente</option>
+            <option value={1}>Crescente</option>
+            <option value={-1}>Decrescente</option>
             </select>
 
             </div>
