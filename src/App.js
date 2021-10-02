@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Home from './componentes/Home';
-import produtos from './componentes/produtos/produtos'
+import Carrinho from './componentes/Carrinho'
 
 const CardProduto = styled.div`
    height: 65vh;
@@ -86,8 +86,13 @@ class App extends React.Component {
     query: "",
     minPrice: "",
     maxPrice:"",
-    order:1
+    order:1,
+    pagina: "home" 
   }
+
+  // mudaPaginaCarrinho = () => {
+  //   this.setState ({ pagina: "carrinho" })
+  //  }
 
   updateQuery = (ev) =>{
     this.setState({
@@ -109,11 +114,19 @@ class App extends React.Component {
  }
  updateOrder = (ev) => {
   this.setState({
-    order:ev.targ
+    order: ev.target.value
   })
  }
 
  render() {
+
+  // let page;
+  // if (this.state.pagina === "home") {
+  //   page = <Home />;
+  // } else if (this.state.pagina === "carrinho") {
+  //   page = <Carrinho />;
+  // }
+
   const novoArrayDeProdutos = this.state.produtos
   .filter(prod =>{
      return prod.name.toLowerCase().includes(this.state.query.toLowerCase())
@@ -124,6 +137,9 @@ class App extends React.Component {
    .filter(prod =>{
     return this.state.maxPrice === "" || prod.price <= this.state.maxPrice 
   })
+  .sort((cres,dec) => {
+    return this.state.order * (cres.price - dec.price)
+  } )
    .map((produto)=>{
     return (
       <CardProduto>
@@ -147,12 +163,17 @@ class App extends React.Component {
    updateMinPrice={this.updateMinPrice}
    maxPrice={this.state.maxPrice}
    updateMaxPrice={this.updateMaxPrice}
+   order={this.state.order}
+   updateOrder={this.updateOrder}
+  //  mudaPaginaCarrinho={this.mudaPaginaCarrinho}
    >
    </Home>
 
     <MainPrincipal>
     {novoArrayDeProdutos}
     </MainPrincipal>
+{/*        
+    {page} */}
 
     <FooterPrincipal>
     </FooterPrincipal>
