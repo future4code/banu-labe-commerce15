@@ -1,11 +1,7 @@
-Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app React e um .gitignore.
- ㅤㅤㅤㅤㅤ## h2 Space Art
-Desenvolvedores
-> Hellen Barbosa
 
-> Joana Dias
+ ㅤㅤㅤㅤㅤ# Space Art
 
-> Mylena Savala
+> By Hellen Barbosa, Joana Dias, Mylena Savala
 
 Objetivo do Projeto
 Criar um site de e-Commerce usando os recursos React... No projeto deve conter as seguintes funcionalidades:
@@ -16,4 +12,4 @@ Criar um site de e-Commerce usando os recursos React... No projeto deve conter a
 ✔️ Filtrar os produtos por valor máximo e valor mínimo.
 
 Acessando o Projeto
-=> Link Surge:
+=> Link Surge: 
