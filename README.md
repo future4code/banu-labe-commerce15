@@ -1,5 +1,5 @@
 
- ㅤㅤㅤㅤㅤ#Space Art
+# Space Art
 
 > By Hellen Barbosa, Joana Dias, Mylena Savala
 
