@@ -4,25 +4,33 @@
 > By Hellen Barbosa, Joana Dias, Mylena Savala
 
 ## Objetivo do Projeto
-
+ㅤ
 Criar um site de e-Commerce usando os recursos React. No projeto deve conter as seguintes funcionalidades:
-
+ㅤ
 ### O projeto consistirá em 3 grandes partes:
-
+ㅤ
 **Home**
+ㅤ
     ✔️ Mostrando todos os produtos;
+    ㅤ
     ✔️ Produtos:
         - Devem ter um botão que permita adicioná-los ao carrinho;
         - Devem exibir o nome, preço e imagem em um card.
         
 **Carrinho**
+ㅤ
     ✔️ Mostrar todos os produtos e quantidades adicionadas;
+    ㅤ
     ✔️ Capacidade de remover itens do carrinho;
+    ㅤ
     ✔️ Mostrar o valor total do carrinho.
     
 **Filtro**
+ㅤ
     ✔️ Por valor mínimo e máximo;
+    ㅤ
     ✔️ Por nome do produto;
+    ㅤ
     ✔️ Ordem crescente e decrescente.
     
 
