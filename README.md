@@ -11,27 +11,27 @@ Criar um site de e-Commerce usando os recursos React. No projeto deve conter as 
 ㅤ
 - **Home**
 ㅤ
-    - ✔ Mostrando todos os produtos;
+    - Mostrando todos os produtos;
     ㅤ
-    - ✔ Produtos:
+    - Produtos:
         - Devem ter um botão que permita adicioná-los ao carrinho;
         - Devem exibir o nome, preço e imagem em um card.
         
 - **Carrinho**
 ㅤ
-    - ✔ Mostrar todos os produtos e quantidades adicionadas;
+    - Mostrar todos os produtos e quantidades adicionadas;
     ㅤ
-    - ✔ Capacidade de remover itens do carrinho;
+    - Capacidade de remover itens do carrinho;
     ㅤ
-    - ✔ Mostrar o valor total do carrinho.
+    - Mostrar o valor total do carrinho.
     
 - **Filtro**
 ㅤ
-     ✔ Por valor mínimo e máximo;
+     - Por valor mínimo e máximo;
     ㅤ
-     ✔ Por nome do produto;
+     - Por nome do produto;
     ㅤ
-     ✔ Ordem crescente e decrescente.
+     - Ordem crescente e decrescente.
     
 
 - Acesse o site clicando aqui: ||https://absurd-porter.surge.sh/|| 
