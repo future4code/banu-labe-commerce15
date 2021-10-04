@@ -1,5 +1,4 @@
 import React from "react";
-import Carrinho from "./Carrinho";
 import styled from "styled-components";
 
 const ImgLogo = styled.img`

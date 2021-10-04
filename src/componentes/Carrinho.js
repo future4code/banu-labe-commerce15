@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import CarrinhoShop from "./CarrinhoShop";
 
 const CardProduto = styled.div`
   height: 80vh;
