@@ -5,8 +5,7 @@
 
 ## Objetivo do Projeto
 ㅤ
-Criar um site de e-Commerce usando os recursos React. No projeto deve conter as seguintes funcionalidades:
-ㅤ
+Criar um site de e-Commerce usando os recursos React.
 ### O projeto consistirá em 3 grandes partes:
 ㅤ
 - **Home**
