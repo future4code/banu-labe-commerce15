@@ -138,7 +138,8 @@ class App extends React.Component {
   //     localStorage.getItem("produtosNoCarrinho")
   //   );
   //   if (pegarProdutos) {
-  //     this.setState({ produtosNoCarrinho: pegarProdutos });
+  //     this.setState({ produtosNoCarrinho: pegarProdutos || [] });
+  //     console.log(pegarProdutos)
   //   }
   // }
 
@@ -152,12 +153,24 @@ class App extends React.Component {
       return p.id === produtoId;
     });
     const novaProduto = prod[0];
-    const novoProdutoAdicionado = [
-      ...this.state.produtosNoCarrinho,
-      novaProduto,
-    ];
 
-    this.setState({ produtosNoCarrinho: novoProdutoAdicionado });
+    const novoProdutoIndex = this.state.produtosNoCarrinho.findIndex((p) => {
+     return p.id === produtoId;
+    }) 
+    if (novoProdutoIndex === -1){
+      const novoProdutoAdicionado = [
+        ...this.state.produtosNoCarrinho,
+        novaProduto,
+      ];
+      console.log(novoProdutoAdicionado)
+      this.setState({ produtosNoCarrinho: novoProdutoAdicionado });
+    } else { 
+        const copiaCarrinho = [...this.state.produtosNoCarrinho]
+        copiaCarrinho[novoProdutoIndex].quantidade++
+        this.setState({ produtosNoCarrinho: copiaCarrinho });
+    }
+
+    
   };
 
   removerProduto = (id) => {

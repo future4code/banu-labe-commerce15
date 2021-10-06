@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const CardProduto = styled.div`
-  height: 80vh;
+  height: 90vh;
   width: 20vw;
   padding: 0px 0px 20px 0px;
   box-shadow: 1px 1px 5px #4daecd;
@@ -125,7 +125,7 @@ class Carrinho extends React.Component {
                 {produto.imagemURL}
                 <p>{produto.name}</p>
                 <p>R${produto.price},00</p>
-                {/* <p>{produto.quantidade}x</p> */}
+                <p>{produto.quantidade}</p>
                 <button onClick={() => this.props.removerProduto(produto.id)}>
                   Remover
                 </button>
